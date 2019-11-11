@@ -1,0 +1,14 @@
+.App {
+  display: flex;              /* this uses flex-box */
+  align-items: center;        /* vertical alignment */
+  justify-content: center;    /* horizontal alignment */
+  height: 100vh;              /* 100% of view heigght, moves box to center of viewing area */
+  color: #78909c;
+  background: linear-gradient(  /* He got from an on-line picker */
+    135deg,
+    rgba(179, 229, 252, 1) 0%,
+    rgba(179, 229, 252, 1) 50%,
+    rgba(240, 98, 146, 1) 50%,
+    rgba(240, 98, 146, 1) 100%
+  );
+}
