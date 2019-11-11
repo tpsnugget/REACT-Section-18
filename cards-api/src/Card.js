@@ -1,25 +1,31 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
+import "./Card.css"
 
-class Card extends Component{
+class Card extends Component {
 
    static defaultProps = {
       deck_id: ""
    }
 
-   constructor(props){
+   constructor(props) {
       super(props)
       this.handleClick = this.handleClick.bind(this)
    }
 
-   handleClick(){
+   handleClick() {
       this.props.gimmeACard()
    }
 
-   render(){
-      return(
+   render() {
+      return (
          <div>
-            <img src={this.props.img} alt=""/>
-            <button onClick={this.handleClick}>Gimme a Card</button>
+            <div>
+               {this.props.cardsRem > 0 && <button onClick={this.handleClick}>Gimme a Card</button>}
+            </div>
+            <div className="Card">
+               <img src={this.props.img} alt={this.props.name} />
+
+            </div>
          </div>
       )
    }
